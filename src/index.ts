@@ -1,9 +1,10 @@
-import "dotenv/config"
+import 'dotenv/config';
+import { getAssociatedAddress } from './airstack';
 
 export const main = async () => {
-    console.log("Start.")
-}
+  console.log(await getAssociatedAddress('orbulo.eth'));
+};
 
 main().then(() => {
-    process.exit(0)
-})
+  process.exit(0);
+});
